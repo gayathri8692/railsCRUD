@@ -1,6 +1,6 @@
 
-<h1>Listing Books</h1>
- <%= link_to 'New Book', new_book_path %>
+<h1>My Book Shelf</h1>
+ <h3><%= link_to 'Add New Book', new_book_path %></h3>
 <table>
   <tr>
     <th>Title</th>
@@ -21,5 +21,5 @@
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
-  <%= link_to 'My Books', controller: 'books' %>
+  <%#<%= link_to 'My Books', controller: 'books' %>
 </table>

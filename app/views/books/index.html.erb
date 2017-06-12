@@ -6,6 +6,7 @@
     <th>Title</th>
     <th>Author</th>
     <th>Genre</th>
+    <th colspan="3"></th>
   </tr>
  
   <% @books.each do |book| %>
@@ -15,8 +16,10 @@
       <td><%= book.genre %></td>
       <td><%= link_to 'Show', book_path(book) %></td>
       <td><%= link_to 'Edit', edit_book_path(book) %></td>
+      <td><%= link_to 'Delete', book_path(book),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
   <%= link_to 'My Books', controller: 'books' %>
-  
 </table>

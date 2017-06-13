@@ -12,5 +12,13 @@
   <strong>Genre:</strong>
   <%= @book.genre %>
 </p>
+
+<h2>Comments</h2>
+<%= render @book.comments %>
+
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
 <%= link_to 'Edit', edit_book_path(@book) %>
 <%= link_to 'Back', books_path %>
